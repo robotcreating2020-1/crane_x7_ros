@@ -30,7 +30,7 @@ def yaw_of(object_orientation):
 def main():
     global gazebo_model_states
 
-    OBJECT_NAME = "wood_cube_5cm"   # 掴むオブジェクトの名前
+    OBJECT_NAME = "bottle"   # 掴むオブジェクトの名前
     GRIPPER_OPEN = 1.2              # 掴む時のハンド開閉角度
     GRIPPER_CLOSE = 0.42            # 設置時のハンド開閉角度
     APPROACH_Z = 0.15               # 接近時のハンドの高さ
