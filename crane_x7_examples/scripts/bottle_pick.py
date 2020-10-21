@@ -82,7 +82,7 @@ def main():
     arm.go()
  
     #下ろす
-    move_arm(0.455, 0.0, 0.12)
+    move_arm(0.455, 0.0, 0.1)
 
     #ハンドを開く
     move_gripper(1.57)
