@@ -3,6 +3,7 @@
 
 
 import rospy
+import math
 import moveit_commander
 import geometry_msgs.msg
 import rosnode
@@ -76,6 +77,32 @@ def main():
     
     #持ち上げる
     move_arm(0.15, 0.2, 0.2)
+
+    # これ以下は変更点
+    target_joint_values = arm.get_current_joint_values()
+
+    for i in range(6):
+      joint_angle = math.radians(-45)
+      for j in range(2, 6, 3):
+        target_joint_values[j] = joint_angle
+        arm.set_joint_value_target(target_joint_values)
+        arm.go()
+        print str(j) + "-> joint_value_target (degrees):",
+        print math.degrees( arm.get_joint_value_target()[j] ),
+        print ", current_joint_values (degrees):",
+        print math.degrees( arm.get_current_joint_values()[j] )
+      joint_angle = math.radians(45)
+      for j in range(2, 6, 3):
+        target_joint_values[j] = joint_angle
+        arm.set_joint_value_target(target_joint_values)
+        arm.go()
+        print str(j) + "-> joint_value_target (degrees):",
+        print math.degrees( arm.get_joint_value_target()[j] ),
+        print ", current_joint_values (degrees):",
+        print math.degrees( arm.get_current_joint_values()[j] )
+      i+=1
+      rospy.sleep(1)
+    #ここまで
 
     #homeに戻る
     arm.set_named_target("home")
