@@ -83,7 +83,7 @@ def main():
 
     for i in range(6):
       joint_angle = math.radians(-45)
-      for j in range(2, 6, 3):
+      for j in range(2, 7, 4):
         target_joint_values[j] = joint_angle
         arm.set_joint_value_target(target_joint_values)
         arm.go()
@@ -91,8 +91,8 @@ def main():
         print math.degrees( arm.get_joint_value_target()[j] ),
         print ", current_joint_values (degrees):",
         print math.degrees( arm.get_current_joint_values()[j] )
-      joint_angle = math.radians(45)
-      for j in range(2, 6, 3):
+      joint_angle = math.radians(90)
+      for j in range(2, 7, 4):
         target_joint_values[j] = joint_angle
         arm.set_joint_value_target(target_joint_values)
         arm.go()
