@@ -78,12 +78,15 @@ def main():
     #持ち上げる
     move_arm(0.15, 0.2, 0.2)
 
-    # これ以下は変更点
-    target_joint_values = arm.get_current_joint_values()
 
+    #SRDFに定義されている"home"の姿勢にする                                                         
+    arm.set_named_target("home")
+    arm.go()
+      
+    target_joint_values = arm.get_current_joint_values()
     for i in range(6):
       joint_angle = math.radians(-45)
-      for j in range(2, 7, 4):
+      for j in range(0, 7, 6):
         target_joint_values[j] = joint_angle
         arm.set_joint_value_target(target_joint_values)
         arm.go()
@@ -91,8 +94,8 @@ def main():
         print math.degrees( arm.get_joint_value_target()[j] ),
         print ", current_joint_values (degrees):",
         print math.degrees( arm.get_current_joint_values()[j] )
-      joint_angle = math.radians(90)
-      for j in range(2, 7, 4):
+      joint_angle = math.radians(45)
+      for j in range(0, 7, 6):
         target_joint_values[j] = joint_angle
         arm.set_joint_value_target(target_joint_values)
         arm.go()
@@ -101,13 +104,15 @@ def main():
         print ", current_joint_values (degrees):",
         print math.degrees( arm.get_current_joint_values()[j] )
       i+=1
-      rospy.sleep(1)
-    #ここまで
+      rospy.sleep(0.5)
+    #ここまで 
 
     #homeに戻る
     arm.set_named_target("home")
     arm.go()
  
+    move_arm(0.15, 0.2, 0.2)
+
     #下ろす
     move_arm(0.455, 0.0, 0.1)
 
