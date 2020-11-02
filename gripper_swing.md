@@ -34,7 +34,7 @@ rosrun crane_x7_examples bottle_pick.py
 また、動かす角度も変えられます。(デフォルトでは0番を30度、6番を45度にしています。)  
 
 gazebo上での動作は以下のようになります。  
-![simplescreenrecorder-2020-11-02_13 23 07](https://user-images.githubusercontent.com/53420676/97841554-64fb7d80-1d29-11eb-9e53-c70ec467548d.gif)
+<img src=https://github.com/robotcreating2020-1/images/blob/master/simplescreenrecorder-2020-11-02_21.42.24.gif width=500px />
   
   
 ###  実機で確認したいこと
