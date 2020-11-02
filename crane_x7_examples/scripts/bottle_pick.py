@@ -83,22 +83,29 @@ def main():
     arm.set_named_target("home")
     arm.go()
       
+    #ボトルを振る動作  
     target_joint_values = arm.get_current_joint_values()
-    for i in range(6):
-      joint_angle = math.radians(-45)
+    for i in range(4):
+      joint_angle1 = math.radians(-30)
+      joint_angle2 = math.radians(-45)
       for j in range(0, 7, 6):
-        target_joint_values[j] = joint_angle
+        target_joint_values[0] = joint_angle1
+        target_joint_values[6] = joint_angle2
         arm.set_joint_value_target(target_joint_values)
         arm.go()
+        move_max_velocity()
         print str(j) + "-> joint_value_target (degrees):",
         print math.degrees( arm.get_joint_value_target()[j] ),
         print ", current_joint_values (degrees):",
         print math.degrees( arm.get_current_joint_values()[j] )
-      joint_angle = math.radians(45)
+      joint_angle1 = math.radians(30)
+      joint_angle2 = math.radians(45)
       for j in range(0, 7, 6):
-        target_joint_values[j] = joint_angle
+        target_joint_values[0] = joint_angle1
+        target_joint_values[6] = joint_angle2
         arm.set_joint_value_target(target_joint_values)
         arm.go()
+        move_max_velocity()
         print str(j) + "-> joint_value_target (degrees):",
         print math.degrees( arm.get_joint_value_target()[j] ),
         print ", current_joint_values (degrees):",
@@ -110,7 +117,8 @@ def main():
     #homeに戻る
     arm.set_named_target("home")
     arm.go()
- 
+
+    #下ろす準備
     move_arm(0.15, 0.2, 0.2)
 
     #下ろす
