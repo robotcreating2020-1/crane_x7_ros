@@ -98,6 +98,7 @@ def main():
         print math.degrees( arm.get_joint_value_target()[j] ),
         print ", current_joint_values (degrees):",
         print math.degrees( arm.get_current_joint_values()[j] )
+        print("shake!!shake!!")
       joint_angle1 = math.radians(30)
       joint_angle2 = math.radians(45)
       for j in range(0, 7, 6):
@@ -110,6 +111,7 @@ def main():
         print math.degrees( arm.get_joint_value_target()[j] ),
         print ", current_joint_values (degrees):",
         print math.degrees( arm.get_current_joint_values()[j] )
+        print("shake!!shake!!")
       i+=1
       rospy.sleep(0.5)
     #ここまで 
@@ -134,8 +136,11 @@ def main():
     arm.set_named_target("home")
     arm.go()
 
+    #verticalに戻る（降ったことがバレないよう初期姿勢に戻る）
+    arm.set_named_target("vertical")
+    arm.go()
 
-    print("done")
+    print("done(振ってやったぜ)")
 
 
 if __name__ == '__main__':
