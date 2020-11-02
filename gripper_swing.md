@@ -14,7 +14,8 @@ roslaunch crane_x7_gazebo crane_x7_with_table.launch
 ---
 
 ###  実機を使う場合  
-？？？  
+  ？？？
+
 ---
 
    
@@ -28,4 +29,5 @@ rosrun crane_x7_examples bottle_pick.py
   
 ボトルは(x,y) = (0.3,0.2)に準備します。  
 アームがボトルをつかんだ後、ボトルを6回ほど振り、机に置きます。  
+
 ---
