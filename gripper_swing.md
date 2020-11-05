@@ -34,7 +34,9 @@ rosrun crane_x7_examples bottle_pick.py
 また、動かす角度も変えられます。(デフォルトでは0番を30度、6番を45度にしています。)  
 
 gazebo上での動作は以下のようになります。  
-<img src=https://github.com/robotcreating2020-1/images/blob/master/simplescreenrecorder-2020-11-02_21.42.24.gif width=500px />
+<img src=https://github.com/robotcreating2020-1/images/blob/master/simplescreenrecorder-2020-11-02_21.42.24.gif width=500px />  
+
+---
   
   
 ###  実機で確認したいこと
@@ -42,6 +44,8 @@ gazebo上での動作は以下のようになります。
 実際に振っている様子  
  →これによってボトルの初期位置、グリッパーの開閉角度、アームを振る際の角度などもろもろのパラメータを調整  
  
- シミュレータを実機の動きの差異次第で調整をかけることを早急に！  
+ 67~72行目　ボトルを掴みに行く座標  
+ 75行目　ハンド閉じる角度  
+ 89,90行目　ボトルを降る角度  
 
 ---
