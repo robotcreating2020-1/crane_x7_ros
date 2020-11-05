@@ -69,7 +69,7 @@ def main():
 
     #掴みに行く
     arm.set_max_velocity_scaling_factor(0.1)
-    move_arm(0.25, 0.20, 0.1)
+    move_arm(0.23, 0.20, 0.1)
 
     #ハンドを閉じる
     move_gripper(0.32)
@@ -113,7 +113,7 @@ def main():
         print math.degrees( arm.get_current_joint_values()[j] )
         print("shake!!shake!!")
       i+=1
-      rospy.sleep(0.5)
+      rospy.sleep(0.1)
     #ここまで 
 
     #homeに戻る
