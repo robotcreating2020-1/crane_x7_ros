@@ -29,7 +29,10 @@ roslaunch crane_x7_gazebo crane_x7_with_table.launch
 ###  実機を使う場合  
   
  実機で動作を客員する場合、CRANE_X7からx軸向きに300mm、y軸向きに200mm離れたところにボトルを設置します。  
- 　　
+ (以下の画像はcm表記、、、)  
+  
+<img src=https://github.com/robotcreating2020-1/images/blob/master/IMG_0452.jpg width=500px />
+  
  次に制御信号ケーブルを接続した状態で次のコマンドを実行します。  
  ```sh
  sudo chmod 777 /dev/ttyUSB0  
@@ -53,13 +56,23 @@ rosrun crane_x7_examples bottle_pick.py
   
 ボトルを振るジョイントはfor文の中で直接指定しているので、容易に変更可能です。(デフォルトでは0番と6番を指定)  
 また、動かす角度も変えられます。(デフォルトでは0番を30度、6番を55度にしています。)  
-
+  
+---
+  
+### gazebo上での動作  
+  
 gazebo上での動作は以下のようになります。  
 <img src=https://github.com/robotcreating2020-1/images/blob/master/simplescreenrecorder-2020-11-02_21.42.24.gif width=500px />  
-
-実機での動作は以下のようになります
-
+  
+---
+  
+### 実機での動作  
+  
+実機での動作は以下のようになります。  
+<img src=https://github.com/robotcreating2020-1/images/blob/master/State_of_Execution.gif width=500px /> 
 
 ---
   
- 
+### 発表用資料  
+  
+発表用資料の動画は[こちら](https://www.youtube.com/watch?v=UCG6y8AXv9U)
