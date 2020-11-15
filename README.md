@@ -59,14 +59,20 @@ rosrun crane_x7_examples bottle_pick.py
   
 ---
   
-### gazebo上での動作は以下のようになります。  
+### gazebo上での動作  
+  
+gazebo上での動作は以下のようになります。  
 <img src=https://github.com/robotcreating2020-1/images/blob/master/simplescreenrecorder-2020-11-02_21.42.24.gif width=500px />  
   
 ---
   
-### 実機での動作は以下のようになります  
+### 実機での動作  
+  
+実機での動作は以下のようになります。  
 <img src=https://github.com/robotcreating2020-1/images/blob/master/State_of_Execution.gif width=500px /> 
 
 ---
   
- 
+### 発表用資料  
+  
+発表用資料の動画は[こちら](https://www.youtube.com/watch?v=UCG6y8AXv9U)
