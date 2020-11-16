@@ -31,7 +31,7 @@ roslaunch crane_x7_gazebo crane_x7_with_table.launch
  実機で動作を客員する場合、CRANE_X7からx軸向きに300mm、y軸向きに200mm離れたところにボトルを設置します。  
  (以下の画像はcm表記、、、)  
   
-<img src=https://github.com/robotcreating2020-1/images/blob/master/IMG_0452.jpg width=500px />
+<img src=https://github.com/robotcreating2020-1/images/blob/master/2020-11-15_1.png width=500px />
   
  次に制御信号ケーブルを接続した状態で次のコマンドを実行します。  
  ```sh
@@ -75,4 +75,4 @@ gazebo上での動作は以下のようになります。
   
 ### 発表用資料  
   
-発表用資料の動画は[こちら](https://www.youtube.com/watch?v=UCG6y8AXv9U)
+発表用資料の動画は[こちら](https://youtu.be/MC9XJ4XuVqc)
